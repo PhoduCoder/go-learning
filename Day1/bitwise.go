@@ -19,14 +19,14 @@ func main() {
 
 	//Remove 2 from count
 	count -= 2
-	fmt.Printf("Now Count is %v \n", count)
+	fmt.Printf("Now Count is %+v \n", count)
 
 	//Add 1 from count
 	count++
-	fmt.Printf("Now Count is %v \n", count)
+	fmt.Printf("Now Count is %#v \n", count)
 
 	//Add 10 to count 
 	count -= -10
-	fmt.Printf("Now Count is %v \n", count)
+	fmt.Printf("Now Count is %v %T \n", count, count)
 
 }
