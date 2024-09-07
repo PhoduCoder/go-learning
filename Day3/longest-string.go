@@ -22,6 +22,6 @@ func longest(arr[]string) string {
 }
 
 func main(){
-	names := []string{"gaurav","revetment","usa","jersey","porsche","JPMorganChase","AmazonWebServices"}
+	names := []string{"gaurav","edison","usa","jersey","porsche","JPMorganChase","AmazonWebServices"}
 	fmt.Printf("The longest name from the list %v is %v \t\n", names, longest(names))
 }
