@@ -15,7 +15,7 @@ import (
 //points the slice to the new hidden array
 
 //also note that there is a starting point for the slice
-//which is almost always the starting point of the array
+//which is the starting point of the array
 //unless the slice was created by taking the last n elements of the array
 
 func main(){
@@ -36,13 +36,18 @@ func main(){
 
 
 	new_sl := make([]int, 4, 6)
-	fmt.Printf("The slice is %v and the length is %v and capacity is %v\n", new_sl, len(new_sl), cap(new_sl))
+	fmt.Printf("The slice is %v of type %T and the length is %v and capacity is %v\n", new_sl, new_sl, len(new_sl), cap(new_sl))
 
 	app_sl := append(new_sl,25,26)
 	fmt.Printf("The slice is %v and the length is %v and capacity is %v\n", app_sl, len(app_sl), cap(app_sl))
 	app_sl_2 := append(app_sl,27)
 	fmt.Printf("The slice is %v and the length is %v and capacity is %v\n", app_sl_2, len(app_sl_2), cap(app_sl_2))
 
+	new_test_sl := new_sl[1:4]
+	fmt.Printf("The slice is %v and the length is %v and capacity is %v\n", new_test_sl, len(new_test_sl), cap(new_test_sl))
+
+	slice_without_cap := make([]int, 4)
+	fmt.Printf("The slice is %v of length %v and capacity %v \n", slice_without_cap, len(slice_without_cap), cap(slice_without_cap))
 }
 
 
