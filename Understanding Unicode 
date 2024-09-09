@@ -1,0 +1,32 @@
+Unicode is assigning each character from all languages
+and even emojis a unique code 
+
+As an example in unicode, the character "h" of english alphabet is assigned
+Unicode of U+0068 
+
+Also note that Small and Capital characters have different unicode value
+h -> U+0068
+H -> U+0048
+
+This 0068 is actually hexadecimal whose 
+equivalent decimal is 
+
+(0*16^4) + (0*16^2) + (6*16^1) + (8*16^0) = 104
+
+The UTF-8 encoding for the word "hello" is just the combination of the binary representations of each character:
+
+Character	Unicode (Hex)	Decimal	UTF-8 (Binary)
+h	        U+0068	        104	    01101000
+e	        U+0065	        101	    01100101
+l	        U+006C	        108	    01101100
+l	        U+006C	        108	    01101100
+o	        U+006F	        111	    01101111
+Final Binary Representation of "hello" in UTF-8:
+h: 01101000
+e: 01100101
+l: 01101100
+l: 01101100
+o: 01101111
+So, the word "hello" is represented in UTF-8 as:
+
+01101000 01100101 01101100 01101100 01101111
