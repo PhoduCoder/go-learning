@@ -19,10 +19,16 @@ import(
 )
 
 func main(){
-	args := os.Args[1] //represent the ID of the person called
-	id, err := strconv.Atoi(args)
-	fmt.Printf("The ID of the person passed is %v and error %T \n", id, err)
-	fmt.Printf("Hi %v \n", getUser(id))
+	if len(os.Args) == 2 {
+		args := os.Args[1] //represent the ID of the person called
+		id, err := strconv.Atoi(args)
+		if err == nil {
+			//fmt.Printf("The ID of the person passed is %v and error %T \n", id, err)
+			fmt.Printf("Hi %v \n", getUser(id))
+		}
+	} else {
+		fmt.Printf("Call the program with right arguments , sample call '''go run Challenge1.go 001''' \n ")
+	}
 }
 
 func getUser(id int) string{
