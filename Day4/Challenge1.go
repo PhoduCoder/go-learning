@@ -19,20 +19,25 @@ import(
 
 func main(){
 	args := os.Args[1] //represent the ID of the person called
-	fmt.Printf("The ID of the person passed is %v and type %T \n", args, args)
+	//fmt.Printf("The ID of the person passed is %v and type %T \n", args, args)
 
-	fmt.Printf("The name of the person passed is %v \n", getUser(args))
+	fmt.Printf("Hi %v \n", getUser(args))
 }
 
 func getUser(id string) string{
 	Users := map[string]string{
-		"001":"Gaurav",
-		"002":"Shreya",
-		"003":"Gautam",
-		"004":"Sonal",
-		"005":"Janki",
-		"006":"BkVerma",
-		"007":"RitaVerma",
+		"001":"John",
+		"002":"Mark",
+		"003":"David",
+		"004":"Justin",
+		"005":"Tom",
+		"006":"Chris",
+		"007":"Michael",
+		"008":"James",
+		"009":"Steven",
+		"010":"Brian",
+		"011":"Adam",
+		"012":"Joseph",
 	}
 
 	name, err := Users[id]
