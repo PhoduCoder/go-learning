@@ -1,4 +1,4 @@
-## Repo dedicated to Go Practice ##
+# Repo dedicated to Go Practice
 
 
 ```markdown

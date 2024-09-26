@@ -1,0 +1,20 @@
+A receiver in Go is a special parameter used to associate a function with a specific type, 
+typically a struct. This allows you to define methods that operate on instances of that type, 
+similar to how methods work in classes in other object-oriented languages.
+
+
+1. Types of Receivers
+Receivers can be either of two types:
+
+
+Value Receiver: A copy of the struct is passed. The method can read, but not MODIFY, the original data.
+
+Pointer Receiver: A pointer to the struct is passed. This allows the method to MODIFY the original struct.
+
+
+2. Why Use Receivers?
+Organize Code: Group related methods with the type they belong to, making code cleaner and easier to manage.
+Encapsulation: Control access to internal fields, particularly unexported (private) fields.
+Modifying Struct Data: With pointer receivers, you can modify the original struct's data.
+Readability: Methods can be called directly on instances, improving readability and usability.
+Interfaces: Receivers allow types to implement interfaces in Go.
