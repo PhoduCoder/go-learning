@@ -1,0 +1,21 @@
+Packages are a way of organizing code
+Any folder and all code within the folder is 
+a Package
+Any Go code within that folder can use variables,
+functions etc. from that package 
+
+However code outside the package can't use the variables 
+function from other packages unless 
+those are exported 
+
+In Go, code(functions, variables) are exported when they begin
+with Capital letters
+
+There is also something called main package
+This also has to contain a main() function
+This is a special kind of package 
+which is called executable
+
+When the executable package is compiled using go build 
+then we get a binary, the name of the binary is the name 
+of the folder in which main package resides
