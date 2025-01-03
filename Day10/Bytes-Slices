@@ -1,0 +1,57 @@
+Byte slices are just like int slices or char slices
+However notice that strings are not char slices
+rather strings are byte slices which are immutable 
+
+[]int => int slices
+[]string => string slices 
+[]char => char slices 
+
+Similarly []byte is a byte slice 
+It is generally used to hold raw binary data 
+A byte in Go is an alias for uint8, which represents an 8-bit unsigned integer.
+
+So []byte is equivalent to []uint8
+
+var b []byte = []byte{'H', 'e', 'l', 'l', 'o'}
+var u []uint8 = []uint8{72, 101, 108, 108, 111}  // Same as the byte slice, but in numeric form
+
+fmt.Println(b)  // Output: [72 101 108 108 111]
+fmt.Println(u)  // Output: [72 101 108 108 111]
+
+================
+
+Hence byte arrays are generally used for string manipulation
+
+Strings are immutable in Go, meaning that when you create a new string by
+modifying an existing one, it creates a new copy of the string. 
+This can be inefficient if you're performing many modifications or 
+concatenations, because each modification creates a new string object.
+
+=======
+var str string
+str = "Hello"
+str = str + " World"  // Creates a new string each time, which can be inefficient
+=======
+Strings in Go are immutable, so every time you modify a string (like appending or changing characters), Go needs to allocate new memory to hold the modified string. This process can lead to inefficiencies in situations where you need to repeatedly modify the string.
+By using []byte, you can work with a mutable slice, allowing you to modify the content in-place and avoid excessive reallocation.
+
+[]byte Allows Efficient In-Place Modifications
+
+str := []byte("Hello")
+str[0] = 'h'  // Modify 'H' to 'h'
+fmt.Println(string(str))  // Output: hello
+=========
+
+Other than string manipulation, byte slices are also used in 
+File operations, network communications and binary data manipulation
+===
+
+Converting from bytes slices to strings and vice versa
+
+s := "Hello"
+byteSlice := []byte(s)  // Convert string to []byte
+fmt.Println(byteSlice)  // Output: [72 101 108 108 111]
+
+newStr := string(byteSlice)  // Convert back to string
+fmt.Println(newStr)  // Output: "Hello"
+======
