@@ -55,3 +55,6 @@ fmt.Println(byteSlice)  // Output: [72 101 108 108 111]
 newStr := string(byteSlice)  // Convert back to string
 fmt.Println(newStr)  // Output: "Hello"
 ======
+
+So LONG STORY short, bytes slices are more efficient and 
+also more flexible 
