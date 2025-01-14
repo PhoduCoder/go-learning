@@ -1,0 +1,30 @@
+New is used to allocate memory for a new zeroed value
+of a specified type.
+New is generally used with struct 
+
+Make is used to initialize maps, list and channels in 
+GoLang
+Without initialization, you won't be able to use these (maps, list and 
+channels properly)
+
+Why Initialization Is Required for These Types
+Slices need an underlying array and a descriptor pointing to it.
+Maps need an internal hash table for storing key-value pairs.
+Channels need internal buffers and synchronization mechanisms for communication.
+
+====
+This panics because we didn't initialize the map
+var m map[string]int // nil map
+m["Alice"] = 25       // Panic: assignment to entry in nil map
+====
+In this example, it doesn't panic because after you declare a nil map
+you then initialized it 
+
+var m map[string]int // This is a nil map
+
+// Initialize manually (with a loop or direct assignment)
+m = map[string]int{} // Manually create the map
+
+m["Alice"] = 25
+m["Bob"] = 30
+=====
