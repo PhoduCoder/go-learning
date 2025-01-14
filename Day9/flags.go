@@ -10,7 +10,7 @@ func main(){
 	//arguments := os.Args
 	//fmt.Printf("The arguments passed are %s \n", arguments[1])
 
-	//Note that the returned type is a string pointer
+	//Note that the returned type wordPtr is a string pointer
 	wordPtr := flag.String("str", "Ram", "First argument which represent name of god" )
 
 	numPtr := flag.Int("rep", 108, "Number of times to repeat the name")

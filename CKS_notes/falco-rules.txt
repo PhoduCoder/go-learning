@@ -1,0 +1,21 @@
+Falco -> Near real time detection tool
+Say a container has been compromised and someone 
+is trying to execute cat /etc/passwd file
+we can detect these events using falco 
+
+Falco can monitor events from linux kernel 
+It can also enrich those events with k8s metadata 
+and even from container runtimes
+
+Once you install falco, which you can on k8s using a helm package
+or using a docker container or on linux systems
+
+Installing also sets a set of predefined rules 
+========
+
+Falco rules file is at the end of the day a YAML file
+It can consist of 
+a) Rules - Conditions under which alerts should be generated.
+b) Macros - Reusable Rules snippets to be used in other rules or Macros
+c) Lists - Collection of items that can be included in other rules 
+ 

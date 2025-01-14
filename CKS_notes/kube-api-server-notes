@@ -1,0 +1,11 @@
+Most of the critical components run as 
+static pods. 
+
+It runs as a static pod
+So its configuration is available in /etc/kubernetes/manifests
+
+candidate@cks7262:/etc/kubernetes/manifests$ ls
+etcd.yaml  kube-apiserver.yaml  kube-controller-manager.yaml  kube-scheduler.yaml
+
+
+
