@@ -1,0 +1,28 @@
+Channels in Go
+
+Channels are used to pass information between Go coroutines
+These information can be of any type.
+
+As an eg,
+ch := make(chan int) //Creates an int type conduit 
+
+similarly,
+
+ch2 := make(chan string) //creates a channel that can be used to pass string information
+
+Channels when created using make function 
+can also take an additional argument 
+
+If passed with no additional arguments, it leads to a unbuffered channel
+while when passed with the capacity, leads to buffered channel
+
+unbuffered channel is like a walkie talkie
+where the exchange happens synchronously 
+this also means that the sender is blocked till the receiver is ready 
+
+and if receiver tries to receive, but no one has sent anything 
+then receiver is blocked
+
+buffered channel is when there is an additional argument in the make function
+which represent the capacity
+
