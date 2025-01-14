@@ -1,0 +1,83 @@
+4. Go Microservices (Intermediate to Advanced)
+Objective: Create a small microservice architecture with multiple Go-based services that communicate over HTTP or gRPC.
+Description:
+Implement several services, such as an authentication service, a user service, and a task service.
+Use Go's http package or gRPC for communication between the services.
+Implement API gateways and load balancing with Kubernetes (useful for your cloud-native focus).
+Skills Gained:
+Working with microservices and inter-service communication.
+Building APIs and managing service dependencies.
+Familiarity with containerization and Kubernetes.
+References:
+Building Microservices with Go
+5. Task Scheduler (Intermediate to Advanced)
+Objective: Build a task scheduler that allows users to schedule tasks (e.g., sending emails, data processing) to run at specific times.
+Description:
+Implement a Go-based scheduler that runs tasks based on a cron-like schedule.
+Use Go’s concurrency model (goroutines and channels) to manage tasks and keep them efficient.
+Store the scheduled tasks in a database and track their execution status.
+Skills Gained:
+Using Go's concurrency model with goroutines and channels.
+Working with databases for persistence.
+Understanding and implementing scheduling algorithms.
+References:
+Go Cron Job Example
+6. Real-Time Chat Application (Advanced)
+Objective: Build a real-time chat app with WebSockets in Go.
+Description:
+Implement a chat application that allows users to join a room and send/receive messages in real time.
+Use Go’s gorilla/websocket library for WebSocket communication.
+Add authentication, support for multiple rooms, and message persistence.
+Skills Gained:
+WebSocket programming with Go.
+Real-time communication techniques.
+Implementing basic authentication and sessions in Go.
+References:
+Gorilla WebSocket Library
+7. Go-Based Job Queue (Advanced)
+Objective: Create a job queue system that can process background tasks asynchronously.
+Description:
+Implement a job queue that accepts jobs from multiple clients and processes them in the background.
+The job queue should be persistent (e.g., using a database or message queue like Redis).
+Use worker goroutines to process jobs and handle retries for failed tasks.
+Skills Gained:
+Building a queue system using Go’s concurrency.
+Working with external systems like Redis or a database.
+Implementing retries and error handling.
+References:
+Go Worker Pool Example
+8. Kubernetes Controller (Advanced)
+Objective: Build a custom Kubernetes controller using Go.
+Description:
+Build a Kubernetes controller that watches for changes to resources (e.g., Pods, Deployments) and takes actions (e.g., scale Pods, auto-rollback deployments).
+Use Kubernetes’ client-go library to interact with the Kubernetes API.
+Implement custom resources and controllers.
+Skills Gained:
+Understanding Kubernetes internals and client libraries.
+Writing controllers and operators in Go.
+Working with Kubernetes CRDs (Custom Resource Definitions).
+References:
+Kubernetes Controller Development
+client-go GitHub
+9. ArgoCD Custom Application Controller (Expert)
+Objective: Extend ArgoCD by writing a custom application controller in Go.
+Description:
+Develop a controller that integrates ArgoCD’s application management with other tools or services.
+For example, you can create a controller that auto-deploys apps based on commit history or monitoring alerts.
+Skills Gained:
+Working with ArgoCD’s API.
+Deep understanding of Kubernetes controllers and Go.
+Extending ArgoCD to meet custom needs.
+References:
+ArgoCD Developer Docs
+10. Distributed Key-Value Store (Expert)
+Objective: Build a distributed key-value store using Go.
+Description:
+Implement a basic key-value store that can run in a distributed environment.
+Use Raft consensus algorithm or another consistency model to manage the distributed state.
+Skills Gained:
+Deep understanding of distributed systems.
+Working with consensus algorithms.
+Building fault-tolerant systems in Go.
+References:
+Raft Consensus Algorithm in Go

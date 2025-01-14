@@ -1,0 +1,13 @@
+Objective: Create a basic command-line tool using Go.
+
+Description:
+Build a simple tool like a "To-Do List" manager or a note-taking app.
+
+Implement basic CRUD operations (Create, Read, Update, Delete) and 
+store the data in memory or a local file.
+
+Skills Gained:
+Go basics (variables, functions, loops).
+Working with the os and flag libraries.
+Working with Files 
+Building a CLI application.

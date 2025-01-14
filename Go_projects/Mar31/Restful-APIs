@@ -1,0 +1,16 @@
+3. RESTful API (Intermediate)
+Objective: Create a RESTful API using Go and serve it with an HTTP server.
+Description:
+Build a simple API (e.g., a user management system with endpoints to add,
+ delete, and update users).
+
+Use JSON for request/response handling.
+
+Add validation, error handling, and use a lightweight database 
+like SQLite or a file-based storage.
+
+Skills Gained:
+Building APIs using Go’s net/http package.
+Working with REST principles (GET, POST, PUT, DELETE).
+JSON serialization/deserialization.
+Using SQLite or other lightweight databases.

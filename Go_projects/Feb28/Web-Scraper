@@ -1,0 +1,14 @@
+Objective: Build a web scraper that extracts data from websites and stores it 
+in a structured format.
+
+Description:
+Create a scraper to pull data from a site 
+(e.g., latest headlines from a news website).
+
+Parse the data and store it in a JSON or CSV file.
+Handle errors (e.g., invalid URLs, connection issues).
+
+Skills Gained:
+Working with HTTP requests and responses.
+Parsing HTML with libraries like goquery.
+Understanding concurrency with Go’s goroutines and channels.
