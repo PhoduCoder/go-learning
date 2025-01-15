@@ -30,7 +30,7 @@ func main(){
 			done <- struct{}{} //sending empty struct to done channel
 		}
 	}()
-	<- done
+	<- done //blocks the main and waits for the signal handler coroutine to signal it has handled the signal
 	fmt.Println("Program is exiting")
 
 }
