@@ -26,3 +26,9 @@ then receiver is blocked
 buffered channel is when there is an additional argument in the make function
 which represent the capacity
 
+Sending to the channel is 
+channel <- value 
+
+Receiving to the channel also uses <- symbol 
+but the arrow points away from the channel 
+value := <-channel 
