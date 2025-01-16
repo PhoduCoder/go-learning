@@ -1,0 +1,19 @@
+---
+topspeed: 150
+name: Porsche
+cool: true
+passengers:
+    Gaurav:
+        age: 34
+        hobbies:
+            - cricket
+            - chess
+    Shreya:
+        age: 31
+        hobbies:
+            - painting
+    Vijay:
+        age: 45
+        hobbies:
+            - Guitar
+

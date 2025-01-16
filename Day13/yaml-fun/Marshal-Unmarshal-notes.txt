@@ -1,0 +1,14 @@
+Marshal -> Convert your struct to YAML 
+
+Unmarshal -> Convert back from YAML to struct 
+In Unmarshal you have to annotate the struct with corresponding YAML elements 
+
+### **Implementing Your Own Unmarshaler**
+
+- **Complex Logic**: When you need to handle custom logic during unmarshaling, like:
+- **Custom Types**: If you have types that don't directly correspond to YAML primitives, or you need special conversion logic.
+- **Dynamic Fields**: If your structure might change dynamically based on some conditions.
+- **Validation**: When you want to validate data during unmarshal or perform additional operations like setting default values or transforming data.
+
+- **Extending the `Unmarshaler` Interface**:
+- Implement `UnmarshalYAML()` method in your type. This method will be invoked instead of the default unmarshal logic:
