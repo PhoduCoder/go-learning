@@ -6,11 +6,13 @@ import (
 
 func main(){
 
-	f, err := os.Create("abc.txt")
+	f, err := os.Create("abc.txt") //returns a file object
 	if err != nil {
 		panic(err)
 	}
 
+	//Write to file using either WriteString method and pass a string 
+	// or by using Write method and pass a byte slice
 	f.WriteString("Any string that we want to append\n")
 	f.WriteString("Another line added\n") //Append string to the file 
 
