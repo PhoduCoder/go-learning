@@ -1,0 +1,17 @@
+---
+addons:
+  fb:
+  -  dev:
+      key1: value1
+      key2: value2
+  -  prod:
+  -  uat:
+      key3: value3
+      key4: value4 
+  prometheus:
+  - dev:
+     key5: value5
+     key6: value6
+     key7: value7
+  - uat:
+  - prod:

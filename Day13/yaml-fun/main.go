@@ -6,7 +6,6 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-
 //Convert YAML to struct - unmarshal
 //Convert struct to YAML - marshal 
 

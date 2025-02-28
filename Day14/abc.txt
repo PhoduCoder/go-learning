@@ -1,1 +1,2 @@
 We wanted to add another line to an existing file
+this is another line

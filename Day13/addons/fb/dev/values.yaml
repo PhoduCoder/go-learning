@@ -1,0 +1,7 @@
+service:
+  type: ClusterIP
+  port: 2020
+  internalTrafficPolicy:
+  loadBalancerClass:
+  loadBalancerSourceRanges: []
+  labels: {}

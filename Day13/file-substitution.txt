@@ -1,0 +1,63 @@
+Objective -> Using a given file with nested maps
+substitute many YAML files 
+
+Input file structure 
+config.yaml 
+---
+addons:
+  fb:
+  -  dev:
+      key1: value1
+      key2: value2
+  -  prod:
+  -  uat:
+      key3: value3
+      key4: value4 
+  prometheus:
+  - dev:
+     key5: value5
+     key6: value6
+     key7: value7
+  - uat:
+  - prod:
+---
+
+Substitution folder - fb ->dev->[k1:v1,k2:v2]
+If there is a folder present and there is no files present then skip it 
+The file inside the folder is always a YAML file 
+Later [ Don't touch Addons list ]
+
+---
+
+Rough steps 
+a) Read the given config.yaml file, check valid.yaml 
+b) Based on what is listed, decide which all files needs to be updated and list their absolute path
+c) Now for each file, go inside the values.yaml file and substitute the given key with the value
+d) When doing Substitution make sure that it is always the exact match and also log whatever was substituted 
+for check 
+e) Right now do it in filesystem, will later think of github 
+
+===
+Possible functions 
+1) Parse the YAMl file and calculate the files and the folder path 
+2) Store them in a dictionary or a struct (better)
+3) 
+
+Struct Candidates type {
+    addonName: string 
+    env: string
+    pathtofolder: string
+    substitutions: dictionary {key1: value1, key2:value2, key3:value3}
+}
+
+create various types of candidates - one that represent each folder path
+
+For each candidate struct, perform a substitution at the pathfolder location
+This would be a substitution function that takes an input the struct 
+and return nothing or an error if substitution were to fail
+alongwith the where exactly did it fail 
+
+Ofcourse log it all times to generate more information for people to understand if things 
+went south
+
+
