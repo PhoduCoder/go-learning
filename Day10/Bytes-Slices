@@ -1,6 +1,24 @@
-Byte slices are just like int slices or char slices
+Byte slices are just like int slices or string slices
 However notice that strings are not char slices
+In fact, char doesn't even exist in Go
 rather strings are byte slices which are immutable 
+
+====
+In Go, instead of char, we have rune , this is just an alias for int32
+=====
+
+package main
+
+import "fmt"
+
+func main() {
+    var ch rune = 'A'  // Single quotes for a rune
+    fmt.Println(ch)     // Outputs: 65 (ASCII code of 'A')
+    fmt.Printf("%c\n", ch) // Outputs: A
+}
+
+
+====
 
 []int => int slices
 []string => string slices 

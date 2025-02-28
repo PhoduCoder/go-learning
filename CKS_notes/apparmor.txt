@@ -1,4 +1,4 @@
-App armor is a MAC and is usually enabled via a kernel module
+App armor is a MAC[Mandatory Access control] and is usually enabled via a kernel module
 
 It disallows some activities on the container
 as an example disable any writes to the container 
