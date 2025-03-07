@@ -22,7 +22,6 @@ func main() {
 
 []int => int slices
 []string => string slices 
-[]char => char slices 
 
 Similarly []byte is a byte slice 
 It is generally used to hold raw binary data 

@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main(){
+func main() {
 
 	//This will have operations with strings
 
@@ -12,9 +12,11 @@ func main(){
 
 	length := len(string1) //Gives us the length of any string
 
-	fmt.Println(length)
+	fmt.Printf("The length of the string1 is %d \n", length)
 
-	for i:=0; i<length; i++ {
+	fmt.Println("Now printing the characters of the string one by one")
+
+	for i := 0; i < length; i++ {
 		//fmt.Println(i)
 		fmt.Println(string1[:i+1])
 	}

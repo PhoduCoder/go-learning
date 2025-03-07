@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main(){
+func main() {
 	var str1 = "GauravInd"
 	var str2 = "Shreya"
 
@@ -16,14 +16,14 @@ func alternateMerge(str1 string, str2 string) string {
 	len1 := len(str1)
 	len2 := len(str2)
 
-	var mergedString []string
+	//var mergedString []string
 
 	if len1 > len2 {
-		for i := 0; i <len1; i++{
-			for j :=0; j <len2; j++{		
+		for i := 0; i < len1; i++ {
+			for j := 0; j < len2; j++ {
 				//fmt.Println(str2[:j+1])
 			}
-		fmt.Println(str1[:i+1])
+			fmt.Println(str1[:i+1])
 		}
 	}
 
