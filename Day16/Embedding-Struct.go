@@ -40,6 +40,8 @@ func getDots() []dot {
 	dot2.width = 10
 	dot2.height = 20
 
+	//When initializing embedded types, you can’t use promotion.
+	//For name, the result is the same, but for location and size, you need to put more work into this:
 	dot3 := dot{
 		name: "B",
 		location: location{
@@ -75,3 +77,6 @@ func main() {
 	}
 
 }
+
+//When embedding pointer types, the type’s name is the type without the pointer notation,
+//so the name *<type> becomes <type>. The field is still a pointer, and only the name is different.

@@ -1,9 +1,10 @@
 type SliceHeader struct {
-    Length int
-    ZerothElement *byte
+	Length        int
+	ZerothElement *byte
 }
 
 slice := SliceHeader{
-    Length: len(slice)-2,
-    ZerothElement: &buffer[101],
+	Length:        len(slice) - 2,
+	ZerothElement: &buffer[101],
 }
+
