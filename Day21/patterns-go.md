@@ -26,3 +26,20 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 
 http.HandleFunc("/hello", instrf("helloHandler", helloHandler))
 ```
+
+Instead of 
+
+```
+func helloHandler(w http.ResponseWriter, r *http.Request) {
+    // Before: instrumentation / logging inline
+    fmt.Println("Starting handler: helloHandler")
+
+    // Actual handler logic
+    fmt.Fprintln(w, "Hello!")
+
+    // After: instrumentation / logging inline
+    fmt.Println("Finished handler: helloHandler")
+}
+
+http.HandleFunc("/hello", helloHandler)
+```
