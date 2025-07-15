@@ -11,6 +11,8 @@ Easy composition of multiple middleware layers
 It’s a common and clean way to build extensible HTTP servers in Go.
 
 
+Whatever is passed in as next is the main handler logic that ultimately gets called inside those wrappers.
+
 ```
 func instrf(name string, next func(w http.ResponseWriter, r *http.Request)) http.HandlerFunc {
     return func(w http.ResponseWriter, r *http.Request) {
