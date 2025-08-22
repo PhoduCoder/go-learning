@@ -14,6 +14,7 @@ func main(){
 	point2 := &name // Another way , pointing to address of another variable
 
 	point3 := new(float64) //Another way to create a pointer
+	
 
 	if point1 != nil {
 		fmt.Printf("The value and type of point1 is %#v, %T ", point1, point1)
