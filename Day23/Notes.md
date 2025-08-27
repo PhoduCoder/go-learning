@@ -39,3 +39,34 @@ func main() {
     fmt.Println(h([]byte("abc"))) // prints 3
 }
 ```
+
+##Notes about struct
+
+Take a look below, this is a struct that takes the above Hash type and create a struct which denotes 
+the ring in a consistent hash
+
+type Ring struct {
+    mu       sync.RWMutex  //for safe concurrent usage
+    hash     Hash // to be able to use a variety of hash functions
+    replicas int // Number of replicas that you want for a given node on the ring, a.k.a number of virtual nodes
+    keys     []int // list of all hashed virtual node
+    vnodeMap map[int]string // Map to represent virtual nodes back to physical node 
+}
+
+
+Now when initilaising the struct, we could use one of two ways - but we prefer the pointer based init
+
+```
+r := &Ring{
+    replicas: 3,
+    hash: crc32.ChecksumIEEE,
+    keys: []int{},
+    vnodeMap: map[int]string{},
+}
+```
+
+r is actually a pointer to the struct 
+We use this type of initialiation if we 
+are creating struct which will be modified and/or copied around a lot
+This makes it much more memory efficient 
+
