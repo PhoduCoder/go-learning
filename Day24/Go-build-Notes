@@ -1,0 +1,41 @@
+You write your code a file called the source code file
+Now you create an executable by using the go build command.
+
+go build -o <name-of-binary> source-code.go 
+
+-o <name-of-binary> is optional 
+If you don't provide the binary name is same as the source code file name
+
+Then you can execute that using ./binary on say a Mac or Linux system
+
+One interesting thing to note is that one can take that binary 
+and just run it on any other system, as long as it has the same 
+OS and the CPU architecture.
+That system also don't need to have the Go runtime installed.
+
+The go runtime is embedded in the binary, so the sie of the binary is large 
+compared to gcc in C
+
+=======
+
+When you just however execute, 
+go run main.go 
+In this step too, the executable is created and is deleted once the binary completes. 
+It is just hidden from us. 
+you can see the folder in which this gets created by using the --work option 
+
+
+======
+
+```
+MacBookPro:Test_Go alieninvader$ go run --work simple.go 
+WORK=/var/folders/1q/075cxz0120qck6sypzhz9phm0000gn/T/go-build4074096661
+Hello Gaurav! Learning to build
+MacBookPro:Test_Go alieninvader$ go build -o fancy simple.go
+MacBookPro:Test_Go alieninvader$ ls -lrth
+total 7912
+-rw-r--r--  1 alieninvader  staff    91B Sep 11 22:15 simple.go
+-rwxr-xr-x  1 alieninvader  staff   1.9M Sep 11 22:15 simple
+-rwxr-xr-x  1 alieninvader  staff   1.9M Sep 11 22:23 fancy
+
+```
