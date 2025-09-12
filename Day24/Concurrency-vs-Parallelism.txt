@@ -34,3 +34,38 @@ Go’s M:N scheduler is designed so you don’t tune thread count manually:
 You control parallelism with GOMAXPROCS (defaults to number of cores).
 
 The runtime handles spinning up enough threads to keep goroutines moving, without “too many” threads.
+
+=====
+
+Java vs GO
+In java, when we create a thread in the program, that is the os thread. In Go, the Go runtime abstracts that
+oS threads creation from the coder and gives us something like a coroutine to deal with concurrency while takes 
+on the tough task of multiplexing go coroutines on a fixed number of threads.
+
+Java:
+
+new Thread(...) → creates a real OS thread.
+
+Each thread = heavy (MBs of stack, kernel-managed).
+
+OS scheduler handles context switching.
+
+You control threads directly (or via pools/executors).
+
+Go:
+
+go func() { ... } → creates a goroutine (tiny stack, cheap).
+
+Go runtime multiplexes thousands/millions of goroutines onto a small pool of OS threads.
+
+You don’t manage threads; you manage goroutines.
+
+Runtime scheduler handles preemption, work-stealing, and blocking recovery.
+
+👉 So yes: Go abstracts OS threads away. You code in terms of concurrency units (goroutines), and Go efficiently maps them to a limited number of OS threads, tuned by GOMAXPROCS.
+
+That’s why people say:
+
+Java = “threads as concurrency primitive.”
+
+Go = “goroutines as concurrency primitive, threads hidden.”
