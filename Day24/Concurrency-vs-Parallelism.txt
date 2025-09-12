@@ -1,0 +1,36 @@
+Concurrency: breaking your program into tasks that could run independently.
+
+Parallelism: those tasks actually run at the same time on multiple CPU cores.
+
+So:
+```
+On single-core, concurrency just means the CPU switches between tasks (time-slicing).
+```
+One can think of concurrent code pieces as pieces of code that can execute on the CPU
+when the executing code either pauses or completes. It is like CPU multitasking better because you have structured your code in different concurrent coroutines
+
+```
+On multi-core, concurrency + a scheduler can map those tasks to multiple cores → true parallel execution.
+```
+In Go, goroutines give you concurrency. The Go scheduler decides whether they run in parallel, depending on GOMAXPROCS and how many CPU cores are available.
+
+
+G (Goroutine) → your lightweight task (go func() {}). Millions possible.
+
+M (Machine/Thread) → an actual OS thread that executes goroutines.
+
+P (Processor) → a logical context that holds a queue of goroutines and is bound to an M. GOMAXPROCS controls how many P’s exist.
+
+So goroutines (G) run on OS threads (M), but only if attached to a P.
+
+M:N means many goroutines (G) are multiplexed onto a smaller number of OS threads (M).
+
+Example: 1 million goroutines might run on 8 OS threads → Go runtime schedules them in and out.
+
+The number of active threads that can execute at once = number of Ps = GOMAXPROCS.
+
+Go’s M:N scheduler is designed so you don’t tune thread count manually:
+
+You control parallelism with GOMAXPROCS (defaults to number of cores).
+
+The runtime handles spinning up enough threads to keep goroutines moving, without “too many” threads.
