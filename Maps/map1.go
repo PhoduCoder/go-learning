@@ -1,5 +1,7 @@
 package main
 
+import "fmt'
+
 func main(){
 
   //Declare a map 
@@ -17,7 +19,7 @@ m1["apple"] = 10    // update
 value := m1["apple"]
 fmt.Println(value)
 
-fmt.Prinln(m["banana"]
+fmt.Println(m["banana"])
 
 //If the KEY doesn't exist, then the value comes as zero
 fmt.Println(m["orange"])
